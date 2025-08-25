@@ -1,0 +1,322 @@
+/* 🔄 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🎨 Variables */
+:root {
+  --jaune: #ffcc00;
+  --jaune-hover: #e6b800;
+  --gris-fond: #f4f4f4;
+  --gris-texte: #333;
+  --bleu-foncé: #2c3e50;
+  --gris-clair: #f9f9f9;
+}
+
+/* 🌐 Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: var(--gris-fond);
+  color: var(--gris-texte);
+}
+
+/* 🧭 Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 180px;
+}
+
+/* 🌄 Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('pdc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* 👤 Profils */
+#profils {
+  padding: 40px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+#profils h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.profils {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profil {
+  background-color: var(--jaune);
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profil:hover {
+  background-color: var(--jaune-hover);
+  transform: translateY(-2px);
+}
+
+/* 💡 Solutions */
+#solutions {
+  padding: 40px 20px;
+  background-color: var(--gris-clair);
+  text-align: center;
+}
+
+.solution {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  margin-bottom: 40px;
+}
+
+.solution.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solution h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* ⚡ Call to Action */
+#cta {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cta-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-box h2 {
+  font-size: 2em;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-box h3 {
+  font-size: 1.4em;
+  font-weight: normal;
+  color: #ccc;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-box h2:hover,
+.cta-box h3:hover {
+  color: var(--jaune);
+}
+
+.cta-box p {
+  margin-bottom: 10px;
+}
+
+.cta-delay {
+  font-size: 0.95em;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.confidentialite {
+  margin-top: 15px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* 📝 Formulaire */
+#formulaire {
+  padding: 40px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+#formulaire form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formulaire input,
+#formulaire textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--gris-texte);
+}
+
+#formulaire button {
+  background-color: var(--jaune);
+  color: #000;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formulaire button:hover {
+  background-color: var(--jaune-hover);
+  transform: translateY(-2px);
+}
+
+.rgpd {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rgpd a {
+  color: var(--gris-texte);
+  text-decoration: underline;
+}
+
+/* 🧱 Footer */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--jaune);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.legal-links {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* 🚀 Réseaux sociaux animés */
+#reseaux {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.reseaux-titre {
+  font-size: 1.4em;
+  color: var(--jaune);
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-buttons .social {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.social-buttons .social:hover {
+  transform: scale(1.15);
+  box-shadow
