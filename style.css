@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* 🎨 Variables */
 :root {
   --jaune: #ffcc00;
   --jaune-hover: #e6b800;
@@ -310,13 +309,4 @@ header {
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-.social-buttons .social:hover {
-  transform: scale(1.15);
-  box-shadow
+  alig
