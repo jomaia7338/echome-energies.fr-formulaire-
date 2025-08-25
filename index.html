@@ -130,35 +130,46 @@
   </section>
 
   <!-- Formulaire -->
-  <section id="formulaire">
-    <h2 style="text-align: center; font-size: 1.8em; color: #2c3e50;">
-      Demandez votre étude gratuite
-    </h2>
-    <form id="contact-form"
-          action="https://formspree.io/f/xjkoqjky"
-          method="POST"
-          onsubmit="return validateRecaptcha();">
-      <input type="text" name="nom" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
-      <textarea name="message" placeholder="Votre projet..." required rows="5"></textarea>
-      <div class="g-recaptcha" data-sitekey="6Letqa0rAAAAAFXWiBwhwkZUEkcTfsZd802QdUtu"></div>
-      <button type="submit" class="btn-submit">
+<section id="formulaire">
+  <h2 style="text-align: center; font-size: 1.8em; color: #2c3e50;">
+    Demandez votre étude gratuite
+  </h2>
+
+  <form id="contact-form"
+        action="https://formspree.io/f/xjkoqjky"
+        method="POST"
+        onsubmit="return validateRecaptcha();">
+
+    <input type="text" name="nom" placeholder="Votre nom" required />
+    <input type="email" name="email" placeholder="Votre email" required />
+    <textarea name="message" placeholder="Votre projet..." required rows="5"></textarea>
+
+    <div class="g-recaptcha" data-sitekey="6Letqa0rAAAAAFXWiBwhwkZUEkcTfsZd802QdUtu"></div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button type="submit" class="btn-submit"
+              style="background-color: #ffcc00; color: #000; font-size: 1.2em; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
         ☀️ Oui, je veux connaître mon potentiel solaire
       </button>
-    </form>
-
-    <div class="rgpd">
-      <p>
-        En soumettant ce formulaire, vous acceptez que vos données soient utilisées
-        pour vous recontacter dans le cadre de votre projet solaire.
-        <a href="politique-confidentialite.html">En savoir plus</a>
+      <p style="margin-top: 10px; font-size: 0.95em; color: #555;">
+        Réponse sous 48h par un conseiller <strong>Echome Énergies</strong>
       </p>
     </div>
-    <p class="confidentialite">
-      <span class="lock-icon">🔒</span>
-      🔒Vos informations resteront strictement confidentielles
+  </form>
+
+  <div class="rgpd">
+    <p>
+      En soumettant ce formulaire, vous acceptez que vos données soient utilisées
+      pour vous recontacter dans le cadre de votre projet solaire.
+      <a href="politique-confidentialite.html">En savoir plus</a>
     </p>
-  </section>
+  </div>
+
+  <p class="confidentialite">
+    <span class="lock-icon">🔒</span>
+    Vos informations resteront strictement confidentielles
+  </p>
+</section>
 
   <!-- Footer -->
   <footer class="footer">
