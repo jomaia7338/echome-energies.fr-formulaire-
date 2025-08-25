@@ -1,83 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        Etude solaire personnalisée | Devenez acteur de votre énergie | Échome Énergies
-    </title>
-    <meta
-        name="description"
-        content="Chez Échome Énergies, nous croyons que chaque toit peut devenir un levier d’indépendance, de rentabilité et d’impact positif. Mais chaque projet est unique — il dépend de votre situation, de vos objectifs et de votre vision. Pour vous proposer une étude solaire vraiment personnalisée, dites-nous simplement qui vous êtes et recevez une solution rentable, adaptée à votre profil et pensée comme un investissement."
-    />
-    <meta
-        name="keywords"
-        content="autoconsommation solaire, installation photovoltaïque, étude solaire gratuite, énergie renouvelable, particulier, professionnel, investissement solaire, Échome Énergies"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-M9G3BKRZ');
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Etude solaire personnalisée",
-            "provider": {
-                "@type": "Organization",
-                "name": "Echome Energies"
-            },
-            "areaServed": "Auvergne-Rhône-Alpes",
-            "audience": [
-                {
-                    "@type": "Audience",
-                    "audienceType": "Particuliers"
-                },
-                {
-                    "@type": "Audience",
-                    "audienceType": "Professionnels"
-                }
-            ],
-            "serviceType": "Installation photovoltaïque rentable et sur mesure"
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echome Energies</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
+<script src="script.js"></script>
 <body>
-    <noscript>
-        <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-M9G3BKRZ"
-            height="0"
-            width="0"
-            style="display: none; visibility: hidden"
-        ></iframe>
-    </noscript>
-    <header>
-        <img src="logo.png" alt="Logo Echome Energies" class="logo" />
-    </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Etude solaire personnalisée</h1>
-            <p>Choisissez votre profil et recevez une solution adaptée.</p>
-        </div>
-    </section>
-    <section
-        class="signature"
-        style="padding: 2em 1em; text-align: center; background-color: #f0f8ff"
-    >
-        <h2 style="
+
+  <header>
+    <img src="logo.png" alt="Logo Echome Energies" class="logo" />
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Étude solaire personnalisée</h1>
+      <p>Choisissez votre profil et recevez une solution adaptée.</p>
+    </div>
+  </section>
+
+  <section id="profils">
+    <h2>Quel est votre profil&nbsp;?</h2>
+    <div class="profils">
+      <div class="profil" data-id="q1">Je veux être autonome</div>
+      <div class="profil" data-id="q2">Je veux réduire mes factures</div>
+      <div class="profil" data-id="q3">Je veux investir dans le durable</div>
+      <div class="profil" data-id="q4">Je veux valoriser mon bien</div>
+      <div class="profil" data-id="q5">Je veux produire et revendre</div>
+    </div>
+  </section>
+
+  <section id="solutions">
+    <div id="q1" class="solution">
+      <h3>Autonomie</h3>
+      <p>Installation avec batteries pour maximiser l’indépendance énergétique.</p>
+    </div>
+    <div id="q2" class="solution">
+      <h3>Économies</h3>
+      <p>Optimisation de la production pour réduire vos factures.</p>
+    </div>
+    <div id="q3" class="solution">
+      <h3>Investissement</h3>
+      <p>Augmentez la valeur de votre bien grâce à une installation solaire rentable et responsable.</p>
+    </div>
+    <div id="q4" class="solution">
+      <h3>Valorisation</h3>
+      <p>Ajout de valeur verte à votre maison pour la revente ou la location.</p>
+    </div>
+    <div id="q5" class="solution">
+      <h3>Production & Revente</h3>
+      <p>Installation raccordée au réseau pour revendre l’excédent d’énergie.</p>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="cta-box">
+      <h2>Prêt à passer à l’énergie solaire&nbsp;?</h2>
+      <p>Demandez votre étude gratuite et recevez une solution personnalisée.</p>
+      <a href="#formulaire" class="cta-button">Je demande mon étude</a>
+    </div>
+  </section>
+
+  <section id="formulaire">
+    <h2>Demandez votre étude gratuite</h2>
+    <form action="https://formspree.io/f/ton-code" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <textarea name="message" placeholder="Votre projet..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="rgpd">
+      <p>En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre projet solaire. 
+        <a href="#confidentialite">En savoir plus</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="confidentialite" style="padding: 40px 20px; background-color: #fff; text-align: center;">
+    <h2>RGPD & Conditions Générales</h2>
+    <p>Vos données sont traitées conformément au RGPD. Vous pouvez consulter nos engagements et nos conditions générales de vente en cliquant ci-dessous.</p>
+    <p><a href="cgv.html" style="color: #0077cc; font-weight: bold;">Voir les CGV et la politique de confidentialité</a></p>
+  </section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 <strong>EC(H)OME ENERGIES</strong></p>
+    <p>1159 Rue de la Galandrine, 38210 Saint-Quentin-sur-Isère – France</p>
+
+    <div class="contact">
+      <a href="tel:+33476373462">📞 04 76 37 34 62</a>
+      <a href="mailto:accueil@echome-energies.fr">📧 accueil@echome-energies.fr</a>
+    </div>
+
+    <div class="social-links">
+      <a href="https://echome-energies.fr" target="_blank" rel="noopener noreferrer">🌐 Site officiel</a>
+      <a href="https://www.pagesjaunes.fr/pros/63071223" target="_blank" rel="noopener noreferrer">🔍 PagesJaunes</a>
+      <a href="https://www.facebook.com/profile.php?id=61563413785578" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+      <a href="http://linkedin.com/in/echome-energies38210" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+      <a href="https://www.qualit-enr.org/entreprises/echome-energies/" target="_blank" rel="noopener noreferrer">✅ Qualit'EnR</a>
+    </div>
+
+    <div class="legal-links">
+      <a href="cgv.html">📄 CGV</a> |
+      <a href="mentionslegales.html">⚖️ Mentions légales</a> |
+      <a href="politique-confidentialite.html">🔐 Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- ✅ Script JS intégré -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const boutons = document.querySelectorAll(".profil");
+      const solutions = document.querySelectorAll(".solution");
+
+      boutons.forEach(bouton => {
+        bouton.addEventListener("click", () => {
+          const id = bouton.dataset.id;
+
+          solutions.forEach(sol => sol.style.display = "none");
+
+          const cible = document.getElementById(id);
+          if (cible) {
+            cible.style.display = "block";
+            cible.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
